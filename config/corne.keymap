@@ -57,22 +57,22 @@
             display-name = "QWERTY";
 
             // --------------------------------------------------------------------------------
-            // |  ESC |  Q  |  W  |  E  |  R  |  T  |                -    |  Y  |  U   |  I  |  O  |  P  | BKSP |      &kp UP_ARROW 
-            // | SHIFT |  A  |  S  |  D  |  F  |  G  |               =    |  H  |  J   |  K  |  L  |  ;  | ’  | 
-            // | CTRL |  Z  |  X  |  C  |  V  |  ALT  |              UP   |  B  |  N   |  M  |  ,  |  .  | /  |
-            //                    | DEL | SPC | LWR |                DN   | RSE | SPC  | ENT |
-            //                                                      enter
+            // |  ESC |  Q  |  W  |  E  |  R  |  T  |                UP    |  Y  |  U   |  I  |  O  |  P  | BKSP |      &kp UP_ARROW 
+            // | SHIFT |  A  |  S  |  D  |  F  |  G  |               DN   |  H  |  J   |  K  |  L  |  ;  | ’  | 
+            // | CTRL |  Z  |  X  |  C  |  V  |  ALT  |              LEFT   |  B  |  N   |  M  |  ,  |  .  | /  |
+            //                    | DEL | SPC | LWR |                RIGHT  | RSE | SPC  | ENT |
+            //                                                      WIN
 
             bindings = <
-&kp ESC    &kp Q  &kp W      &kp E     &kp R  &kp T          &kp MINUS     &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&td0       &kp A  &kp S      &kp D     &kp F  &kp G          &kp EQUAL   &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z  &kp X      &kp C     &kp V  &kp RALT          &kp UP_ARROW   &kp B        &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH
-                  &kp SPACE  &kp DEL  &lt 3 SPACE  &mo 1    &kp DOWN_ARROW  &mo 2  &lt LGUI SPACE  &kp ENTER
-                                                             &kp ENTER
+&kp ESC    &kp Q  &kp W      &kp E     &kp R  &kp T          &kp UP_ARROW     &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&td0       &kp A  &kp S      &kp D     &kp F  &kp G          &kp DOWN_ARROW   &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LCTRL  &kp Z  &kp X      &kp C     &kp V  &kp RALT          &kp LEFT_ARROW   &kp B        &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH
+                  &kp SPACE  &kp DEL  &lt 3 SPACE  &mo 1    &kp RIGHT_ARROW  &mo 2  &lt 3 SPACE  &kp ENTER
+                                                             &kp LGUI
             >;
 
             label = "QWERTY";
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp EQUAL MINUS>;
         };
 
         lower_layer {
