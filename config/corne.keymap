@@ -22,12 +22,12 @@
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
 
-        td1: td1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD1";
-            #binding-cells = <0>;
-            bindings = <&mkp LCLK>, <&mkp RCLK>;
-        };
+//        td1: td1 {
+//            compatible = "zmk,behavior-tap-dance";
+//            label = "TD1";
+//            #binding-cells = <0>;
+//            bindings = <&mkp LCLK>, <&mkp RCLK>;
+//        };
 
         mmv {
             acceleration-exponent = <1>;      // 1
@@ -117,7 +117,7 @@
 &trans  &kp CARET     &kp AMPS      &kp ASTRK  &kp LPAR   &kp RPAR     &mmv MOVE_DOWN   &none      &kp KP_MINUS &kp KP_EQUA   &kp LBKT  &kp RBKT  &kp BSLH
 &trans  &none         &none         &none      &none      &none        &mmv MOVE_LEFT   &none      &none        &none         &none     &none     &kp TILDE
                       &none         &none      &none      &none        &mmv MOVE_RIGHT  &trans     &trans       &trans
-                                                                       &td1
+                                                                       &none
             >;
 
             label = "SYMBOL";
@@ -138,7 +138,7 @@
 &kp LSHIFT &kp LEFT &kp DOWN &kp RIGHT &none  &none          &mmv MOVE_DOWN   &kp F7  &kp F8  &kp F9  &kp F10 &kp F11 &kp F12
 &kp LCTRL  &none    &none    &none     &none  &none          &mmv MOVE_LEFT   &none   &none   &none   &none   &none   &none
            &bt BT_CLR_ALL    &trans    &trans &trans         &mmv MOVE_RIGHT  &trans  &trans  &trans
-                                                             &td1
+                                                             &none
             >;
 
             label = "FN";
