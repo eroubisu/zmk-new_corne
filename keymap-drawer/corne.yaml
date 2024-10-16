@@ -146,7 +146,7 @@ layers:
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&td1'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   '3':
   - $$mdi:keyboard-esc$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -195,4 +195,4 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&td1'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
