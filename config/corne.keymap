@@ -107,15 +107,15 @@
             display-name = "SYMBOL";
 
             // -----------------------------------------------------------------------------------------
-            // |  ESC |  !  |  @  |  #  |  $  |  %  |             MUP     |     |  _  |  +  |  {  |  }  |  |  |
-            // | SHFT |  ^  |  &  |  *  |  (  |  )  |             MDN     |     |  -  |  =  |  [  |  ]  |  \  |
-            // | CTRL |     |     |     |     |     |             MLEFT   |     |     |     |     |     |  ~  |
-            //                    |     |     |     |             MRIGHT  |     |     |     |
+            // | TAB |  !  |  @  |  #  |  $  |  %  |             MUP     |     |  _  |  +  |  {  |  }  |  |  |
+            // |     |  ^  |  &  |  *  |  (  |  )  |             MDN     |     |  -  |  =  |  [  |  ]  |  \  |
+            // |     |     |     |     |     |     |             MLEFT   |     |     |     |     |     |  ~  |
+            //                   |     |     |     |             MRIGHT  |     |     |     |
 
             bindings = <
-&trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT    &mmv MOVE_UP     &none      &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE2
-&trans  &kp CARET     &kp AMPS      &kp ASTRK  &kp LPAR   &kp RPAR     &mmv MOVE_DOWN   &none      &kp MINUS  &kp EQUAL &kp LBKT  &kp RBKT  &kp BSLH
-&trans  &none         &none         &none      &none      &none        &mmv MOVE_LEFT   &none      &none      &none     &none     &none     &kp TILDE
+&kp TAB &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT    &mmv MOVE_UP     &none      &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE2
+&none   &kp CARET     &kp AMPS      &kp ASTRK  &kp LPAR   &kp RPAR     &mmv MOVE_DOWN   &none      &kp MINUS  &kp EQUAL &kp LBKT  &kp RBKT  &kp BSLH
+&none   &none         &none         &none      &none      &none        &mmv MOVE_LEFT   &none      &none      &none     &none     &none     &kp TILDE
                       &none         &none      &none      &none        &mmv MOVE_RIGHT  &trans     &trans     &trans
                                                                        &td1
             >;
@@ -128,13 +128,13 @@
             display-name = "Fn";
 
             // -----------------------------------------------------------------------------------------
-            // |  ESC | TAB |  UP  |     |     |     |             MUP     | F1 | F2 | F3 | F4  | F5  | F6  |
+            // |  ESC |     |  UP  |     |     |     |             MUP     | F1 | F2 | F3 | F4  | F5  | F6  |
             // | SHFT |LEFT |  DN  |RIGHT|     |     |             MDN     | F7 | F8 | F9 | F10 | F11 | F12 |
             // | CTRL |     |      |     |     |     |             MLEFT   |    |    |    |     |     | CLR |
             //                     |     |     |     |             MRIGHT  |    |    |    |
 
             bindings = <
-&kp ESC    &kp TAB    &kp UP   &none     &none  &none          &mmv MOVE_UP     &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6
+&kp ESC    &none    &kp UP   &none     &none  &none          &mmv MOVE_UP     &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6
 &kp LSHIFT &kp LEFT &kp DOWN &kp RIGHT &none  &none          &mmv MOVE_DOWN   &kp F7  &kp F8  &kp F9  &kp F10 &kp F11 &kp F12
 &kp LCTRL  &none    &none    &none     &none  &none          &mmv MOVE_LEFT   &none   &none   &none   &none   &none   &none
            &bt BT_CLR_ALL    &trans    &trans &trans         &mmv MOVE_RIGHT  &trans  &trans  &trans
