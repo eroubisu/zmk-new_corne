@@ -128,13 +128,13 @@
             display-name = "Fn";
 
             // -----------------------------------------------------------------------------------------
-            // |  ESC |     |  UP  |     |     |     |             MUP     | F1 | F2  | F3  | F4  |   |     |
-            // | SHFT |LEFT |  DN  |RIGHT|     |     |             MDN     | F5 | F6  | F7  | F8  |   |     |
-            // | CTRL |     |      |     |     |     |             MLEFT   | F9 | F10 | F11 | F12 |   | CLR |
+            // |  ESC |     |  UP  |     |     |     |             MUP     | F1 | F2  | F3  | F4  |   | BKSP |
+            // | SHFT |LEFT |  DN  |RIGHT|     |     |             MDN     | F5 | F6  | F7  | F8  |   |      |
+            // | CTRL |     |      |     |     |     |             MLEFT   | F9 | F10 | F11 | F12 |   | CLR  |
             //                     |     |     |     |             MRIGHT  |    |     | ENT |
 
             bindings = <
-&kp ESC    &none    &kp UP   &none     &none  &none          &mmv MOVE_UP     &kp F1   &kp F2   &kp F3   &kp F4   &none  &none
+&kp ESC    &none    &kp UP   &none     &none  &none          &mmv MOVE_UP     &kp F1   &kp F2   &kp F3   &kp F4   &none  &kp BSPC
 &kp LSHIFT &kp LEFT &kp DOWN &kp RIGHT &none  &none          &mmv MOVE_DOWN   &kp F5   &kp F6   &kp F7   &kp F8   &none  &none
 &kp LCTRL  &none    &none    &none     &none  &none          &mmv MOVE_LEFT   &kp F9   &kp F10  &kp F11  &kp F12  &none  &bt BT_CLR_ALL
                     &none    &trans    &trans &trans         &mmv MOVE_RIGHT  &none    &none    &kp ENTER
