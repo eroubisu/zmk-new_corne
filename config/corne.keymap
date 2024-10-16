@@ -22,6 +22,13 @@
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
 
+        td1: td1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD1";
+            #binding-cells = <0>;
+            bindings = <&mkp LCLK>, <&mkp RCLK>;
+        };
+
         mmv {
             acceleration-exponent = <1>;      // 1
             time-to-max-speed-ms = <900>;    // 40
@@ -57,18 +64,18 @@
             display-name = "QWERTY";
 
             // --------------------------------------------------------------------------------
-            // |  ESC |  Q  |  W  |  E  |  R  |  T  |                UP    |  Y  |  U   |  I  |  O  |  P  | BKSP |      &kp UP_ARROW 
-            // | SHIFT |  A  |  S  |  D  |  F  |  G  |               DN   |  H  |  J   |  K  |  L  |  ;  | ’  | 
-            // | CTRL |  Z  |  X  |  C  |  V  |  ALT  |              LEFT   |  B  |  N   |  M  |  ,  |  .  | /  |
-            //                    | DEL | SPC | LWR |                RIGHT  | RSE | SPC  | ENT |
-            //                                                      WIN
+            // |  ESC  |  Q  |  W  |  E  |  R  |  T  |               UP    |  Y  |  U   |  I  |  O  |  P  | BKSP |
+            // | SHIFT |  A  |  S  |  D  |  F  |  G  |               DN    |  H  |  J   |  K  |  L  |  ;  |   ’  |
+            // | CTRL  |  Z  |  X  |  C  |  V  | ALT |               LEFT  |  B  |  N   |  M  |  ,  |  .  |   /  |
+            //                     | DEL | SPC | LWR |               RIGHT | RSE | SPC  | ENT |
+            //                                                       WIN
 
             bindings = <
-&kp ESC    &kp Q  &kp W      &kp E     &kp R  &kp T          &kp UP_ARROW     &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&td0       &kp A  &kp S      &kp D     &kp F  &kp G          &kp DOWN_ARROW   &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z  &kp X      &kp C     &kp V  &kp RALT          &kp LEFT_ARROW   &kp B        &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH
-                  &kp SPACE  &kp DEL  &lt 3 SPACE  &mo 1    &kp RIGHT_ARROW  &mo 2  &lt 3 SPACE  &kp ENTER
-                                                             &kp LGUI
+&kp ESC    &kp Q  &kp W      &kp E     &kp R       &kp T          &kp UP_ARROW     &kp Y  &kp U       &kp I     &kp O     &kp P    &kp BSPC
+&td0       &kp A  &kp S      &kp D     &kp F       &kp G          &kp DOWN_ARROW   &kp H  &kp J       &kp K     &kp L     &kp SEMI &kp SQT
+&kp LCTRL  &kp Z  &kp X      &kp C     &kp V       &kp RALT       &kp LEFT_ARROW   &kp B  &kp N       &kp M     &kp COMMA &kp DOT  &kp FSLH
+                  &kp SPACE  &kp DEL   &lt 3 SPACE &mo 1          &kp RIGHT_ARROW  &mo 2  &lt 3 SPACE &kp ENTER
+                                                                  &kp LGUI
             >;
 
             label = "QWERTY";
@@ -79,17 +86,17 @@
             display-name = "NUMBER";
 
             // -----------------------------------------------------------------------------------------
-            // |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT |  4  |  5  |  6  | HOME  | PG_UP |
-            // | SHFT |     |     |     |     |     |   |     |  1  |  2  |  3  |  END  | PG_DN |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
+            // |    |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |    |
+            // |    | BT1 | BT2 | BT3 | BT4 | BT5 |   |     |  4  |  5  |  6  |     |    |
+            // |    |     |     |     |     |     |   |     |  1  |  2  |  3  |     |    |
+            //                  | DEL | SPC | LWR |   |     |  -  |     |
 
             bindings = <
-&trans  &kp N1           &kp N2          &kp N3        &kp N4        &kp N5             &mmv MOVE_UP     &kp N6           &kp N7            &kp N8          &kp N9          &kp N0    &kp BSPC
-&trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3       &mmv MOVE_DOWN   &kp LEFT         &kp N4            &kp N5          &kp N6          &kp HOME  &kp PG_UP
-&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF    &mmv MOVE_LEFT   &rgb_ug RGB_EFR  &kp N1            &kp N2          &kp N3          &kp END   &kp PG_DN
-                         &kp C_MUTE      &trans        &trans        &trans             &mmv MOVE_RIGHT  &kp INS          &kp DEL          &trans
-                                                                                        &mkp LCLK
+&none  &kp N1       &kp N2       &kp N3       &kp N4       &kp N5       &mmv MOVE_UP    &kp N6  &kp N7       &kp N8   &kp N9   &kp N0  &none
+&none  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &mmv MOVE_DOWN  &none   &kp N4       &kp N5   &kp N6   &none   &none
+&none  &none        &none        &none        &none        &none        &mmv MOVE_LEFT  &none   &kp N1       &kp N2   &kp N3   &none   &none
+                    &none        &trans       &trans       &trans       &mmv MOVE_RIGHT &none   &kp KP_MINUS &none
+                                                                        &mkp LCLK
             >;
 
             label = "NUMBER";
@@ -100,17 +107,17 @@
             display-name = "SYMBOL";
 
             // -----------------------------------------------------------------------------------------
-            // |  ESC |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
+            // |  ESC |  !  |  @  |  #  |  $  |  %  |             MUP     |     |  _  |  +  |  {  |  }  |  |  |
+            // | SHFT |  ^  |  &  |  *  |  (  |  )  |             MDN     |     |  -  |  =  |  [  |  ]  |  \  |
+            // | CTRL |     |     |     |     |     |             MLEFT   |     |     |     |     |     |  ~  |
+            //                    |     |     |     |             MRIGHT  |     |     |     |
 
             bindings = <
-&trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT    &mmv MOVE_UP     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4     &mmv MOVE_DOWN   &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5     &mmv MOVE_LEFT   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                      &trans        &trans     &trans     &kp SPACE    &mmv MOVE_RIGHT  &kp RET    &trans     &trans
-                                                                       &mkp LCLK
+&trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT    &mmv MOVE_UP     &none      &kp UNDER    &kp KP_PLUS   &kp LBRC  &kp RBRC  &kp PIPE2
+&trans  &kp CARET     &kp AMPS      &kp ASTRK  &kp LPAR   &kp RPAR     &mmv MOVE_DOWN   &none      &kp KP_MINUS &kp KP_EQUA   &kp LBKT  &kp RBKT  &kp BSLH
+&trans  &none         &none         &none      &none      &none        &mmv MOVE_LEFT   &none      &none        &none         &none     &none     &kp TILDE
+                      &none         &none      &none      &none        &mmv MOVE_RIGHT  &trans     &trans       &trans
+                                                                       &td1
             >;
 
             label = "SYMBOL";
@@ -119,12 +126,19 @@
 
         layer_3 {
             display-name = "Fn";
+
+            // -----------------------------------------------------------------------------------------
+            // |  ESC |     |  UP  |     |     |     |             MUP     | F1 | F2 | F3 | F4  | F5  | F6  |
+            // | SHFT |LEFT |  DN  |RIGHT|     |     |             MDN     | F7 | F8 | F9 | F10 | F11 | F12 |
+            // | CTRL |     |      |     |     |     |             MLEFT   |    |    |    |     |     | CLR |
+            //                     |     |     |     |             MRIGHT  |    |    |    |
+
             bindings = <
-&trans  &kp F1      &kp F2      &kp F3       &kp F4     &kp F5      &mmv MOVE_UP     &kp F6       &kp F7     &kp F8       &kp F9      &kp F10          &kp F11
-&trans  &trans      &mkp LCLK   &mkp MCLK    &mkp RCLK  &mkp MB4    &mmv MOVE_DOWN   &bootloader  &mkp LCLK  &mkp MCLK    &mkp RCLK   &kp PRINTSCREEN  &kp F12
-&trans  &sys_reset  &trans      &bootloader  &trans     &mkp MB5    &mmv MOVE_LEFT   &trans       &trans     &bootloader  &sys_reset  &kp SCROLLLOCK   &kp PAUSE_BREAK
-                    &kp C_MUTE  &trans       &trans     &trans      &mmv MOVE_RIGHT  &trans       &trans     &trans
-                                                                    &mkp LCLK
+&kp ESC    &none    &kp UP   &none     &none  &none          &mmv MOVE_UP     &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6
+&kp LSHIFT &kp LEFT &kp DOWN &kp RIGHT &none  &none          &mmv MOVE_DOWN   &kp F7  &kp F8  &kp F9  &kp F10 &kp F11 &kp F12
+&kp LCTRL  &none    &none    &none     &none  &none          &mmv MOVE_LEFT   &none   &none   &none   &none   &none   &none
+           &bt BT_CLR_ALL    &trans    &trans &trans         &mmv MOVE_RIGHT  &trans  &trans  &trans
+                                                             &td1
             >;
 
             label = "FN";
