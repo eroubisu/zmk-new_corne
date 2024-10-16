@@ -22,13 +22,6 @@
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
 
-//        td1: td1 {
-//            compatible = "zmk,behavior-tap-dance";
-//            label = "TD1";
-//            #binding-cells = <0>;
-//            bindings = <&mkp LCLK>, <&mkp RCLK>;
-//        };
-
         mmv {
             acceleration-exponent = <1>;      // 1
             time-to-max-speed-ms = <900>;    // 40
@@ -87,13 +80,13 @@
 
             // -----------------------------------------------------------------------------------------
             // |    |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |    |
-            // |    | BT1 | BT2 | BT3 | BT4 | BT5 |   |     |  4  |  5  |  6  |     |    |
+            // |    | BT1 | BT2 | BT3 | BT4 |     |   |     |  4  |  5  |  6  |     |    |
             // |    |     |     |     |     |     |   |     |  1  |  2  |  3  |     |    |
             //                  | DEL | SPC | LWR |   |     |  -  |     |
 
             bindings = <
 &none  &kp N1       &kp N2       &kp N3       &kp N4       &kp N5       &mmv MOVE_UP    &kp N6  &kp N7       &kp N8   &kp N9   &kp N0  &none
-&none  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &mmv MOVE_DOWN  &none   &kp N4       &kp N5   &kp N6   &none   &none
+&none  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none        &mmv MOVE_DOWN  &none   &kp N4       &kp N5   &kp N6   &none   &none
 &none  &none        &none        &none        &none        &none        &mmv MOVE_LEFT  &none   &kp N1       &kp N2   &kp N3   &none   &none
                     &none        &trans       &trans       &trans       &mmv MOVE_RIGHT &none   &kp KP_MINUS &none
                                                                         &mkp LCLK
