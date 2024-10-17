@@ -86,16 +86,16 @@
             display-name = "NUMBER";
 
             // -----------------------------------------------------------------------------------------
-            // |    |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |    |
-            // |    | BT1 | BT2 | BT3 | BT4 | BT5 |   |     |  4  |  5  |  6  |     |    |
-            // |    |     |     |     |     |     |   |     |  1  |  2  |  3  |     |    |
-            //                  | DEL | SPC | LWR |   |  -  |  0  |  .  |
+            // |    |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |BKSP|
+            // |SHFT| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |  4  |  5  |  6  |  +  | -  |
+            // |    |     |     |     |     |     |   |  .  |  1  |  2  |  3  |  *  | /  |
+            //                  | DEL | SPC |     |   | GUI | SPC | ENT |
 
             bindings = <
-&none  &kp N1       &kp N2       &kp N3       &kp N4       &kp N5       &mmv MOVE_UP    &kp N6    &kp N7  &kp N8   &kp N9   &kp N0  &none
-&none  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &mmv MOVE_DOWN  &none     &kp N4  &kp N5   &kp N6   &none   &none
-&none  &none        &none        &none        &none        &none        &mmv MOVE_LEFT  &none     &kp N1  &kp N2   &kp N3   &none   &none
-                    &none        &trans       &trans       &trans       &mmv MOVE_RIGHT &kp MINUS &kp N0  &kp DOT
+&none  &kp N1       &kp N2       &kp N3       &kp N4       &kp N5       &mmv MOVE_UP    &kp N6   &kp N7    &kp N8   &kp N9   &kp N0    &kp BSPC
+&td0   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &mmv MOVE_DOWN  &none    &kp N4    &kp N5   &kp N6   &kp PLUS  &kp MINUS
+&none  &none        &none        &none        &none        &none        &mmv MOVE_LEFT  &kp DOT  &kp N1    &kp N2   &kp N3   &kp STAR  &kp SLASH
+                    &none        &kp DEL      &lt 3 SPACE  &trans       &mmv MOVE_RIGHT &kp LGUI &kp SPACE &kp ENTER
                                                                         &td1
             >;
 
@@ -107,17 +107,17 @@
             display-name = "SYMBOL";
 
             // -----------------------------------------------------------------------------------------
-            // | TAB |  !  |  @  |  #  |  $  |  %  |             MUP     |     |  _  |  +  |  {  |  }  |  |  |
-            // |     |  ^  |  &  |  *  |  (  |  )  |             MDN     |     |  -  |  =  |  [  |  ]  |  \  |
-            // |     |     |     |     |     |     |             MLEFT   |     |     |     |     |     |  ~  |
-            //                   |     |     |     |             MRIGHT  |     |     |     |
+            // | `~  |  !  |  @  |  #  |  $  |  %  |             MUP     |     |     |     | -_ | += |BKSP|
+            // | TAB |  ^  |  &  |  *  |  (  |  )  |             MDN     |     |     |     | [{ | ]} | \| |
+            // |     |     |     |     |     |     |             MLEFT   |     |     |     |    |    |    |
+            //                   | DEL | SPC | GUI |             MRIGHT  |     | SPC | ENT |
 
             bindings = <
-&kp TAB &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT    &mmv MOVE_UP     &none      &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE2
-&none   &kp CARET     &kp AMPS      &kp ASTRK  &kp LPAR   &kp RPAR     &mmv MOVE_DOWN   &none      &kp MINUS  &kp EQUAL &kp LBKT  &kp RBKT  &kp BSLH
-&none   &none         &none         &none      &none      &none        &mmv MOVE_LEFT   &none      &none      &none     &none     &none     &kp TILDE
-                      &none         &none      &none      &none        &mmv MOVE_RIGHT  &none      &none      &none
-                                                                       &td1
+&kp GRAVE &kp EXCL      &kp AT        &kp HASH   &kp DLLR    &kp PRCNT    &mmv MOVE_UP     &none      &none   &none  &kp MINUS  &kp EQUAL  &kp BSPC
+&kp TAB   &kp CARET     &kp AMPS      &kp ASTRK  &kp LPAR    &kp RPAR     &mmv MOVE_DOWN   &none      &none   &none  &kp LBKT   &kp RBKT   &kp BSLH
+&none     &none         &none         &none      &none       &none        &mmv MOVE_LEFT   &none      &none   &none  &none      &none      &none
+                        &none         &kp DEL    &lt 3 SPACE &kp LGUI     &mmv MOVE_RIGHT  &trans     &kp SPACE   &kp ENTER
+                                                                          &td1
             >;
 
             label = "SYMBOL";
@@ -131,14 +131,14 @@
             // |  ESC |     |  UP  |     |     |     |             MUP     | F1 | F2  | F3  | F4  |   | BKSP |
             // | SHFT |LEFT |  DN  |RIGHT|     |     |             MDN     | F5 | F6  | F7  | F8  |   |      |
             // | CTRL |     |      |     |     |     |             MLEFT   | F9 | F10 | F11 | F12 |   | CLR  |
-            //                     |     |     |     |             MRIGHT  |    |     | ENT |
+            //                     | DEL | SPC | GUI |             MRIGHT  |GUI |     | ENT |
 
             bindings = <
-&kp ESC    &none    &kp UP   &none     &none  &none          &mmv MOVE_UP     &kp F1   &kp F2   &kp F3   &kp F4   &none  &kp BSPC
-&kp LSHIFT &kp LEFT &kp DOWN &kp RIGHT &none  &none          &mmv MOVE_DOWN   &kp F5   &kp F6   &kp F7   &kp F8   &none  &none
-&kp LCTRL  &none    &none    &none     &none  &none          &mmv MOVE_LEFT   &kp F9   &kp F10  &kp F11  &kp F12  &none  &bt BT_CLR_ALL
-                    &none    &trans    &trans &trans         &mmv MOVE_RIGHT  &none    &none    &kp ENTER
-                                                             &td1
+&kp ESC    &none    &kp UP   &none     &none        &none          &mmv MOVE_UP     &kp F1   &kp F2   &kp F3   &kp F4   &none  &kp BSPC
+&kp LSHIFT &kp LEFT &kp DOWN &kp RIGHT &none        &none          &mmv MOVE_DOWN   &kp F5   &kp F6   &kp F7   &kp F8   &none  &none
+&kp LCTRL  &none    &none    &none     &none        &none          &mmv MOVE_LEFT   &kp F9   &kp F10  &kp F11  &kp F12  &none  &bt BT_CLR_ALL
+                    &none    &kp DEL   &lt 3 SPACE  &kp LGUI       &mmv MOVE_RIGHT  &kp LGUI &none    &kp ENTER
+                                                                   &td1
             >;
 
             label = "FN";
