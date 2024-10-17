@@ -86,17 +86,17 @@
             display-name = "NUMBER";
 
             // -----------------------------------------------------------------------------------------
-            // |    |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |BKSP|
+            // | TAB|  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |BKSP|
             // |SHFT| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |  4  |  5  |  6  |  +  | -  |
             // |    |     |     |     |     |     |   |  .  |  1  |  2  |  3  |  *  | /  |
             //                  | DEL | SPC |     |   | GUI | SPC | ENT |
 
             bindings = <
-&none  &kp N1       &kp N2       &kp N3       &kp N4       &kp N5       &mmv MOVE_UP    &kp N6   &kp N7    &kp N8   &kp N9   &kp N0    &kp BSPC
-&td0   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &mmv MOVE_DOWN  &none    &kp N4    &kp N5   &kp N6   &kp PLUS  &kp MINUS
-&none  &none        &none        &none        &none        &none        &mmv MOVE_LEFT  &kp DOT  &kp N1    &kp N2   &kp N3   &kp STAR  &kp SLASH
-                    &kp K_PP     &kp DEL      &lt 3 SPACE  &trans       &mmv MOVE_RIGHT &kp LGUI &kp SPACE &kp ENTER
-                                                                        &td1
+&kp TAB &kp N1       &kp N2       &kp N3       &kp N4       &kp N5       &mmv MOVE_UP    &kp N6   &kp N7    &kp N8   &kp N9   &kp N0    &kp BSPC
+&td0    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &mmv MOVE_DOWN  &none    &kp N4    &kp N5   &kp N6   &kp PLUS  &kp MINUS
+&none   &none        &none        &none        &none        &none        &mmv MOVE_LEFT  &kp DOT  &kp N1    &kp N2   &kp N3   &kp STAR  &kp SLASH
+                     &kp K_PP     &kp DEL      &lt 3 SPACE  &trans       &mmv MOVE_RIGHT &kp LGUI &kp SPACE &kp ENTER
+                                                                         &td1
             >;
 
             label = "NUMBER";
@@ -108,13 +108,13 @@
 
             // -----------------------------------------------------------------------------------------
             // | `~  |  !  |  @  |  #  |  $  |  %  |             MUP     |     |     |     | -_ | += |BKSP|
-            // | TAB |  ^  |  &  |  *  |  (  |  )  |             MDN     |     |     |     | [{ | ]} | \| |
+            // | SHFT|  ^  |  &  |  *  |  (  |  )  |             MDN     |     |     |     | [{ | ]} | \| |
             // |     |     |     |     |     |     |             MLEFT   |     |     |     |    |    |    |
             //                   | DEL | SPC | GUI |             MRIGHT  |     | SPC | ENT |
 
             bindings = <
 &kp GRAVE &kp EXCL      &kp AT        &kp HASH   &kp DLLR    &kp PRCNT    &mmv MOVE_UP     &none      &none   &none  &kp MINUS  &kp EQUAL  &kp BSPC
-&kp TAB   &kp CARET     &kp AMPS      &kp ASTRK  &kp LPAR    &kp RPAR     &mmv MOVE_DOWN   &none      &none   &none  &kp LBKT   &kp RBKT   &kp BSLH
+&td0      &kp CARET     &kp AMPS      &kp ASTRK  &kp LPAR    &kp RPAR     &mmv MOVE_DOWN   &none      &none   &none  &kp LBKT   &kp RBKT   &kp BSLH
 &none     &none         &none         &none      &none       &none        &mmv MOVE_LEFT   &none      &none   &none  &none      &none      &none
                         &kp K_PP      &kp DEL    &lt 3 SPACE &kp LGUI     &mmv MOVE_RIGHT  &trans     &kp SPACE   &kp ENTER
                                                                           &td1
