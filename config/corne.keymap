@@ -29,21 +29,6 @@
             bindings = <&mkp LCLK>, <&mkp RCLK>;
         };
 
-        mmv {
-            acceleration-exponent = <1>;      // 1
-            time-to-max-speed-ms = <900>;    // 40
-            delay-ms = <0>;                   // 0
-        };
-
-        msc {
-            acceleration-exponent = <1>;      // 0
-            time-to-max-speed-ms = <400>;      // 500
-            delay-ms = <0>;                   // 10
-        };
-
-    };
-
-    macros {
         macro_1: macro_1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -56,6 +41,19 @@
                 , <&macro_tap &kp ENTER>
                 ;
         };
+
+        mmv {
+            acceleration-exponent = <1>;      // 1
+            time-to-max-speed-ms = <900>;    // 40
+            delay-ms = <0>;                   // 0
+        };
+
+        msc {
+            acceleration-exponent = <1>;      // 0
+            time-to-max-speed-ms = <400>;      // 500
+            delay-ms = <0>;                   // 10
+        };
+
     };
 
     rgb_encoder: rgb_encoder {
