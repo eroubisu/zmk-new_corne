@@ -51,7 +51,7 @@
                 <&macro_press &kp LSHFT &kp RALT>,
                 <&macro_tap &kp L>,
                 <&macro_release &kp LSHFT &kp RALT>,
-                <&macro_tap &kp L &kp N2>,
+                <&macro_tap &kp X &kp N2>,
                 <&macro_tap &kp ENTER>;
         };
     };
