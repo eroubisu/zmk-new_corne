@@ -55,8 +55,8 @@
                 <&macro_tap &kp ENTER>;
         };
         macro_2: macro_2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
             bindings =
                 <$kp DLLR>,
                 <&kp DLLR>,
