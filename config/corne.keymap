@@ -48,11 +48,12 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LSHFT &kp LALT &kp L>
-                , <&macro_delay 200>  /* 延迟 0.2 秒 (200 毫秒) */
+                = <&macro_press &kp LSHFT &kp LALT>
+                , <&macro_tap &kp L>
+                , <&macro_release &kp LSHFT &kp LALT>
+                , <&macro_delay 200>
                 , <&macro_tap &kp x &kp 2>
                 , <&macro_tap &kp ENTER>
-                , <&macro_release &kp LSHFT &kp LALT &kp L>
                 ;
         };
     }
