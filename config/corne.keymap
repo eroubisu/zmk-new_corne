@@ -56,6 +56,17 @@
         };
     };
 
+    macros {
+        macro_2: macro_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap $kp DLLR>,
+                <&macro_tap &kp DLLR>,
+                <&macro_tap $kp LEFT_ARROW>;
+        };
+    };
+
     rgb_encoder: rgb_encoder {
         compatible = "zmk,behavior-sensor-rotate";
         label = "RGB_ENCODER";
