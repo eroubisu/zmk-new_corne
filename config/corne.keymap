@@ -56,7 +56,7 @@
                 , <&macro_tap &kp ENTER>
                 ;
         };
-    }
+    };
 
     rgb_encoder: rgb_encoder {
         compatible = "zmk,behavior-sensor-rotate";
