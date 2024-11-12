@@ -55,6 +55,11 @@
                 ;
         };
     };
+    raise_layer {
+        bindings = <&macro_1>;
+    };
+
+
 
     rgb_encoder: rgb_encoder {
         compatible = "zmk,behavior-sensor-rotate";
