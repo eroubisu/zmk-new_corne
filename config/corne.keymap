@@ -54,11 +54,14 @@
                 <&macro_tap &kp X &kp N2>,
                 <&macro_tap &kp ENTER>;
         };
+        
         macro_2: macro_2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_tap $kp DLLR &kp DLLR $kp LEFT_ARROW>;
+                <&macro_tap $kp DLLR>,
+                <&macro_tap &kp DLLR>,
+                <&macro_tap $kp LEFT_ARROW>;
         };
     };
 
