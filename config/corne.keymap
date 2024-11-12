@@ -58,7 +58,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press $kp DLLR &kp DLLR $kp LEFT_ARROW>;
+                <&macro_tap $kp DLLR &kp DLLR $kp LEFT_ARROW>;
         };
     };
 
