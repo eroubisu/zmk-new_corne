@@ -29,17 +29,17 @@
             bindings = <&mkp LCLK>, <&mkp RCLK>;
         };
 
-        zed_em_kay: zed_em_kay {
+        macro_1: macro_1 {
+            label = "macro_1";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LSHFT &kp LALT>
-                , <&macro_tap &kp L>
-                , <&macro_release &kp LSHFT &kp LALT>
-                , <&macro_delay 200>
-                , <&macro_tap &kp x &kp 2>
-                , <&macro_tap &kp ENTER>
-                ;
+            bindings =
+                <&macro_press &kp LSHFT &kp LALT>,
+                <&macro_tap &kp L>,
+                <&macro_release &kp LSHFT &kp LALT>,
+                <&macro_delay 200>,
+                <&macro_tap &kp x &kp 2>,
+                <&macro_tap &kp ENTER>;
         };
 
         mmv {
