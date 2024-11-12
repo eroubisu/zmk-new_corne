@@ -29,19 +29,6 @@
             bindings = <&mkp LCLK>, <&mkp RCLK>;
         };
 
-        macro_1: macro_1 {
-            label = "macro_1";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press &kp LSHFT &kp LALT>,
-                <&macro_tap &kp L>,
-                <&macro_release &kp LSHFT &kp LALT>,
-                <&macro_delay 200>,
-                <&macro_tap &kp x &kp 2>,
-                <&macro_tap &kp ENTER>;
-        };
-
         mmv {
             acceleration-exponent = <1>;      // 1
             time-to-max-speed-ms = <900>;    // 40
@@ -108,7 +95,7 @@
             bindings = <
 &kp TAB &kp N1       &kp N2       &kp N3       &kp N4       &kp N5       &mmv MOVE_UP    &kp N6   &kp N7    &kp N8   &kp N9   &kp N0    &kp BSPC
 &td0    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &mmv MOVE_DOWN  &none    &kp N4    &kp N5   &kp N6   &kp PLUS  &kp MINUS
-&none   &none        &none        &none        &none        &none     &mmv MOVE_LEFT  &kp DOT  &kp N1    &kp N2   &kp N3   &kp STAR  &kp SLASH
+&none   &none        &none        &none        &none        &none        &mmv MOVE_LEFT  &kp DOT  &kp N1    &kp N2   &kp N3   &kp STAR  &kp SLASH
                      &kp C_PP     &kp DEL      &kp SPACE    &trans       &mmv MOVE_RIGHT &kp LGUI &kp SPACE &kp ENTER
                                                                          &none
             >;
@@ -122,7 +109,7 @@
 
             // -----------------------------------------------------------------------------------------
             // | `~  |  !  |  @  |  #  |  $  |  %  |             MUP     |     |     |     | -_ | += |BKSP|
-            // | SHFT|  ^  |  &  |  *  |  (  |  )  |             MDN     |     |     |     | [{ | ]} | \| |
+            // | SHFT|  ^  |  &  |  *  |  (  |  )  |             MDN     |     |     |     | [  | ]  | \| |
             // |     |     |     |     |     |     |             MLEFT   |     |     |     |    |    |    |
             //                   | DEL | SPC | GUI |             MRIGHT  |     | SPC | ENT |
 
