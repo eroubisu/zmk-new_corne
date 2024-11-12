@@ -40,9 +40,7 @@
             time-to-max-speed-ms = <400>;      // 500
             delay-ms = <0>;                   // 10
         };
-    };
 
-    macros {
         macro_1: macro_1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -54,12 +52,8 @@
                 , <&macro_release &kp LSHFT &kp LALT &kp L>
                 ;
         };
-    };
-    raise_layer {
-        bindings = <&macro_1>;
-    };
 
-
+    };
 
     rgb_encoder: rgb_encoder {
         compatible = "zmk,behavior-sensor-rotate";
