@@ -88,13 +88,8 @@
 &kp ESC    &kp Q  &kp W      &kp E     &kp R       &kp T          &kp UP_ARROW     &kp Y  &kp U       &kp I     &kp O     &kp P    &kp BSPC
 &td0       &kp A  &kp S      &kp D     &kp F       &kp G          &kp DOWN_ARROW   &kp H  &kp J       &kp K     &kp L     &kp SEMI &kp SQT
 &kp LCTRL  &kp Z  &kp X      &kp C     &kp V       &kp RALT       &kp LEFT_ARROW   &kp B  &kp N       &kp M     &kp COMMA &kp DOT  &kp FSLH
-<<<<<<< HEAD
                   &kp SPACE  &kp DEL   &kp SPACE   &mo 1          &kp RIGHT_ARROW  &mo 2  &lt 3 SPACE &kp ENTER
                                                                   &none
-=======
-                  &kp SPACE  &kp DEL   &lt 3 SPACE &mo 1          &kp RIGHT_ARROW  &mo 2  &lt 3 SPACE &kp ENTER
-                                                                  &kp LGUI
->>>>>>> parent of f7c358a (Update corne.keymap)
             >;
 
             label = "QWERTY";
@@ -113,15 +108,9 @@
             bindings = <
 &kp TAB &kp N1       &kp N2       &kp N3       &kp N4       &kp N5       &mmv MOVE_UP    &kp N6   &kp N7    &kp N8   &kp N9   &kp N0    &kp BSPC
 &td0    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &mmv MOVE_DOWN  &none    &kp N4    &kp N5   &kp N6   &kp PLUS  &kp MINUS
-<<<<<<< HEAD
 &none   &none        &none        &none        &none        &none     &mmv MOVE_LEFT  &kp DOT  &kp N1    &kp N2   &kp N3   &kp STAR  &kp SLASH
                      &kp C_PP     &kp DEL      &kp SPACE    &trans       &mmv MOVE_RIGHT &kp LGUI &kp SPACE &kp ENTER
                                                                          &none
-=======
-&none   &none        &none        &none        &none        &none        &mmv MOVE_LEFT  &kp DOT  &kp N1    &kp N2   &kp N3   &kp STAR  &kp SLASH
-                     &kp C_PP     &kp DEL      &lt 3 SPACE  &trans       &mmv MOVE_RIGHT &kp LGUI &kp SPACE &kp ENTER
-                                                                         &td1
->>>>>>> parent of f7c358a (Update corne.keymap)
             >;
 
             label = "NUMBER";
@@ -141,13 +130,8 @@
 &kp GRAVE &kp EXCL      &kp AT        &kp HASH   &kp DLLR    &kp PRCNT    &mmv MOVE_UP     &none      &none   &none  &kp MINUS  &kp EQUAL  &kp BSPC
 &td0      &kp CARET     &kp AMPS      &kp ASTRK  &kp LPAR    &kp RPAR     &mmv MOVE_DOWN   &none      &none   &none  &kp LBKT   &kp RBKT   &kp BSLH
 &none     &none         &none         &none      &none       &none        &mmv MOVE_LEFT   &none      &none   &none  &none      &none      &none
-<<<<<<< HEAD
                         &kp C_MUTE    &kp DEL    &kp SPACE   &kp LGUI     &mmv MOVE_RIGHT  &trans     &kp SPACE   &kp ENTER
                                                                           &none
-=======
-                        &kp C_MUTE    &kp DEL    &lt 3 SPACE &kp LGUI     &mmv MOVE_RIGHT  &trans     &kp SPACE   &kp ENTER
-                                                                          &td1
->>>>>>> parent of f7c358a (Update corne.keymap)
             >;
 
             label = "SYMBOL";
@@ -167,13 +151,8 @@
 &kp ESC    &none    &kp UP   &kp E     &none        &none          &mmv MOVE_UP    &kp F1   &kp F2      &kp F3   &kp F4   &none  &kp BSPC
 &kp LSHIFT &kp LEFT &kp DOWN &kp RIGHT &none        &none          &mmv MOVE_DOWN  &kp F5   &kp F6      &kp F7   &kp F8   &none  &none
 &kp LCTRL  &none    &none    &none     &none        &none          &mmv MOVE_LEFT  &kp F9   &kp F10     &kp F11  &kp F12  &none  &bt BT_CLR_ALL
-<<<<<<< HEAD
                     &none    &kp DEL   &kp SPACE    &kp LGUI       &mmv MOVE_RIGHT &kp LGUI &lt 3 SPACE &kp ENTER
                                                                    &none
-=======
-                    &none    &kp DEL   &lt 3 SPACE  &kp LGUI       &mmv MOVE_RIGHT &kp LGUI &lt 3 SPACE &kp ENTER
-                                                                   &td1
->>>>>>> parent of f7c358a (Update corne.keymap)
             >;
 
             label = "FN";
