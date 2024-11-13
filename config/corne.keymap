@@ -95,6 +95,8 @@
                 <&kp BSLH &kp L &kp A &kp TAB>;
 
             label = "MACRO_3";
+            wait-ms = <20>;
+            tap-ms = <20>;
         };
     };
 
