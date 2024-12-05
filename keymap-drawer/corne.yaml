@@ -179,7 +179,7 @@ layers:
   - X
   - C
   - V
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - B
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
