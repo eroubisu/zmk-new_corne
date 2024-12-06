@@ -144,16 +144,16 @@ layers:
   - LGUI
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - {type: held}
-  - Sft+ $$mdi:keyboard-esc$$
+  - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   FN:
   - $$mdi:keyboard-esc$$
-  - Q
-  - W
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:arrow-up-bold$$
   - E
-  - R
-  - T
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - F1
   - F2
@@ -162,11 +162,11 @@ layers:
   - F5
   - F6
   - $$mdi:apple-keyboard-shift$$
-  - A
-  - S
-  - D
-  - F
-  - G
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-right-bold$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - F7
   - F8
@@ -175,11 +175,11 @@ layers:
   - F11
   - F12
   - $$mdi:apple-keyboard-control$$
-  - Z
-  - X
-  - C
-  - V
-  - B
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -193,6 +193,6 @@ layers:
   - LGUI
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - LGUI
-  - {t: '$$mdi:keyboard-space$$', h: FN, type: held}
+  - {t: '$$mdi:keyboard-esc$$', type: held}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
