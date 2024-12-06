@@ -144,7 +144,7 @@ layers:
   - LGUI
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - {type: held}
-  - $$mdi:keyboard-space$$
+  - Sft+ $$mdi:keyboard-esc$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   FN:
