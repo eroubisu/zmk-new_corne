@@ -68,7 +68,7 @@
             bindings = <
 &kp TAB    &kp N1        &kp N2        &kp N3        &kp N4        &kp N5                                      &mmv MOVE_UP                     &kp N6        &kp N7     &kp N8     &kp N9  &kp N0    &kp BSPC
 &td0       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp DOT       &kp N4     &kp N5     &kp N6  &kp HOME  &kp PG_UP
-&kp LCTRL  &none         &none         &none         &none         &none         &kp C_MUTE                    &mmv MOVE_DOWN                   &kp N0        &kp N1     &kp N2     &kp N3  &kp END   &kp PG_DN
+&kp LCTRL  &none         &none         &none         &none         &kp LALT      &kp C_MUTE                    &mmv MOVE_DOWN                   &kp N0        &kp N1     &kp N2     &kp N3  &kp END   &kp PG_DN
                                        &kp DEL       &kp SPACE     &mo 1                                                                        &kp LEFT_WIN  &kp SPACE  &kp ENTER
             >;
 
