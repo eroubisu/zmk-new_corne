@@ -37,7 +37,7 @@ layers:
   - $$mdi:keyboard-space$$
   - $$mdi:arrow-down-bold$$
   - RGB TOG
-  - EP ON
+  - RGB COLOR HSB(333,70,56)
   - EP OFF
   - RGB BRI
   - RGB BRD
