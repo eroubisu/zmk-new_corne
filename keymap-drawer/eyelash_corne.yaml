@@ -37,19 +37,19 @@ layers:
   - $$mdi:keyboard-space$$
   - $$mdi:arrow-down-bold$$
   - RGB TOG
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - EP ON
+  - EP OFF
+  - RGB BRI
+  - RGB BRD
   - BT CLR ALL
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:keyboard-space$$
   - LEFT WIN
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:keyboard-space$$', h: QWERTY, type: held}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   NUMBER:
-  - $$mdi:keyboard-esc$$
+  - $$mdi:keyboard-tab$$
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
@@ -135,9 +135,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - RGB BRI
-  - RGB BRD
-  - RGB COLOR HSB(0,0,100)
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:backspace-reverse-outline$$
