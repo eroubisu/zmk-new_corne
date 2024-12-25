@@ -78,8 +78,8 @@ layers:
   - HOME
   - PG UP
   - $$mdi:apple-keyboard-control$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '&new_desktop'
+  - '&desktop'
   - '&desktop_left'
   - '&desktop_right'
   - '&alt_Tab'
