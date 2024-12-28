@@ -78,10 +78,10 @@ layers:
   - HOME
   - PG UP
   - $$mdi:apple-keyboard-control$$
-  - '&new_desktop'
   - '&desktop'
   - '&desktop_left'
   - '&desktop_right'
+  - '&GoTray'
   - '&alt_Tab'
   - $$mdi:volume-off$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
